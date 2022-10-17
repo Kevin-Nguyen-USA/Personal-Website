@@ -1,5 +1,10 @@
 import Head from 'next/head'
 import {BsFillMoonStarsFill} from 'react-icons/bs';
+import {BsFillHouseFill} from 'react-icons/bs';
+import {AiFillLinkedin} from 'react-icons/ai';
+import {AiFillGithub} from 'react-icons/ai';
+import Image from "next/image";
+import avatar from '../public/avatar.png'
 
 export default function Home() {
   return (
@@ -12,23 +17,100 @@ export default function Home() {
 
   
        
-    <main>
+    <main className="bg-black px-10">
+
+      
 
     <section className="min-h-screen">
-      
+      <nav className='py-10 mb-12 flex justify-between'>
 
-<nav>
-  <h1>Kevin Nguyen</h1>
-  <ul>
-    <li><BsFillMoonStarsFill/></li>
-    <li><a href='#'>Resume</a></li>
+
+  <h1 className='text-xl font-burtons text-white'>Kevin's Portfolio - Currently under development</h1>
+  <ul className='flex items-center'>
+
+    
+
+    <li><BsFillHouseFill className='cursor-pointer text-2xl text-white'/></li>
+
+    
+   
+    <li>
+      <a className=' font-burtons bg-gradient-to-r from-orange-400 to-orange-500 text-white px-4 py-2 rounded-d ml-8'href='#'>
+      Resume
+      </a>
+      </li>
   </ul>
 </nav>
+
+<div className='text-center p-10'>
+
+  <h2 className='text-5xl py-2 text-orange-400 font-medium '>Kevin Nguyen</h2>
+
+  <h3 className='text-2xl py-2 text-white'>Information Technology Specialist</h3>
+
+  <p className='text-md py-5 leading-8 text-white'>Hello and welcome to my personal portfolio! <br></br>
+ This website is still currently under development. Here, you can find out more about myself and my professional career.
+  
+  
+  </p>
+
+</div>
+
+<div className='text-5xl flex justify-center gap-9 py-3 text-white'>
+
+<a href='https://www.linkedin.com/in/kevin-nguyen-usa/'>
+<AiFillLinkedin>
+</AiFillLinkedin>
+</a>
+
+<a href='https://github.com/Kevin-Nguyen-USA/'>
+<AiFillGithub>
+</AiFillGithub>
+</a>
+
+</div>
+
+
+
     </section>
 
-    </main>
 
-      
+
+
+
+<section className ='bg-slate'>
+
+<div>
+
+<h3 className='text-2xl py-2 text-white text-center font-burtons' >About</h3>
+
+<p className='text-md py-5 leading-8 text-center text-white'>
+
+Hi! My name is Kevin and I am an Information Technology specialist. 
+<br></br>
+While I am still relatively early on within my career, I have experience and skills with many tools & technologies that are used within the industry today.
+
+
+</p>
+</div>
+
+<div className='relative mx-auto  rounded-full w-80 h-80 overflow-hidden'>
+
+<Image src={avatar} layout='fill' objectFit='cover' />
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+    </main>
     </div>
   );
 }
