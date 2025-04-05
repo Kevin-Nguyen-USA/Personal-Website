@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kevin Nguyen - IT Professional</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -39,11 +42,13 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
-        header h1 {
+        header h1,
+        section h2 {
             color: #61afef;
             font-size: 2.5em;
             margin-bottom: 0.5em;
             font-weight: 500;
+            font-family: 'JetBrains Mono', monospace;
         }
 
         section {
@@ -59,18 +64,29 @@
             font-weight: 500;
         }
 
-        .experience, .projects, .certifications, .education {
+        .experience,
+        .projects,
+        .certifications,
+        .education,
+        .skills {
             margin-bottom: 20px;
             background-color: #3e4451;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            max-width: 1200px;
+            width: 95%;
         }
 
-        .experience h3, .projects h3, .certifications h3, .education h3 {
+        .experience h3,
+        .projects h3,
+        .certifications h3,
+        .education h3,
+        .skills h3 {
             color: #61afef;
             margin-bottom: 10px;
             font-weight: 500;
+            font-family: 'JetBrains Mono', monospace;
         }
 
         .contact-info {
@@ -95,7 +111,11 @@
             vertical-align: middle;
         }
 
-        .certifications-item, .projects-item, .education-item, .experience-item {
+        .certifications-item,
+        .projects-item,
+        .education-item,
+        .experience-item,
+        .skills-item {
             display: flex;
             align-items: flex-start;
             margin-bottom: 20px;
@@ -105,14 +125,21 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
 
-        .certifications-item img, .projects-item img, .education-item img, .experience-item img {
+        .certifications-item img,
+        .projects-item img,
+        .education-item img,
+        .experience-item img,
+        .skills-item img {
             width: 80px;
             height: auto;
             margin-right: 15px;
         }
 
-        .certifications-details, .projects-details, .education-details, .experience-details {
-            flex-grow: 1;
+        .certifications-details,
+        .projects-details,
+        .education-details,
+        .experience-details,
+        .skills-details {
         }
 
         .side-nav {
@@ -183,6 +210,7 @@
             align-items: center;
             border-radius: 8px;
             font-weight: bold;
+            font-family: 'JetBrains Mono', monospace;
         }
 
         .top-nav-links a {
@@ -190,6 +218,7 @@
             text-decoration: none;
             margin-left: 20px;
             transition: color 0.3s ease;
+            font-family: 'JetBrains Mono', monospace;
         }
 
         .top-nav-links a:hover {
@@ -218,6 +247,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="top-nav" id="topNav">
         <div class="top-nav-content">
@@ -226,23 +256,24 @@
                 <a href="#top">About Me</a>
                 <a href="#education">Education</a>
                 <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
                 <a href="#certifications">Certifications</a>
                 <a href="#projects">Projects</a>
             </div>
         </div>
     </div>
-
     <header id="top">
         <img src="img/avatar.png" alt="Your Headshot">
         <h1>Kevin Nguyen</h1>
         <p style="color: #61afef;">Cloud & Cybersecurity Professional</p>
         <div class="intro-buttons">
-            <a href="https://www.linkedin.com/in/kevin-nguyen-usa/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</a>
+            <a href="https://www.linkedin.com/in/kevin-nguyen-usa/" target="_blank"><i class="fa fa-linkedin-square"
+                    aria-hidden="true"></i> LinkedIn</a>
             <a href="mailto:knguy39@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i> Email</a>
-            <a href="https://github.com/Kevin-Nguyen-USA" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
+            <a href="https://github.com/Kevin-Nguyen-USA" target="_blank"><i class="fa fa-github"
+                    aria-hidden="true"></i> GitHub</a>
         </div>
     </header>
-
     <div class="container">
         <section id="introduction">
             <h2>Introduction</h2>
@@ -250,122 +281,195 @@
                 Hello, I'm Kevin. A results-driven cloud and cybersecurity professional with 2+ years of experience in IT.
             </p>
         </section>
-
         <section id="education">
             <h2>Education</h2>
             <div class="education-item">
-                <img src="university-icon.png" alt="University Icon">
+                <img src="img/unm-logo-spelled-vertical-color.png" alt="University Icon">
                 <div class="education-details">
                     <h3>Bachelor's of Business Administration in Management Information Systems</h3>
                     <p>University: University of New Mexico</p>
                     <p>Dates: 2018 - 2022</p>
-                    <p>Relevant coursework: Network Security, Cryptography, Incident Response.</p>
+                    <p>Relevant coursework: Networking, Cybersecurity, System Administration.</p>
+                    <p>GPA: 3.7</p>
                 </div>
             </div>
-            
-            </div>
         </section>
-
         <section id="experience">
             <h2>Experience</h2>
             <div class="experience-item">
-                <img src="work-icon.png" alt="Work Icon">
+                <img src="img/bluehalo.png" alt="Work Icon">
                 <div class="experience-details">
-                    <h3>DevOps / Infrastructure Systems Administrator</h3>
+                    <h3>DevOps / Infrastructure Systems Administrator - BlueHalo</h3>
                     <p>Dates: Nov 2024 - Present</p>
-                    <p>Led the deployment and implementation of AWS GovCloud environment for DoD agency. Oversaw maintainence for NIPR and SIPR systems. </p>
+                    <div>
+                        <p>Led the deployment and implementation of AWS GovCloud environment for DoD agency. Oversaw
+                            troubleshooting and maintainence for all NIPR, SIPR, and JWICS systems. </p>
+                        
+                        
+                            <p>Developed multiple SharePoint websites and PowerApp applications with Power Automation integrations to enhance business functions such as IT ticketing, purchase requests, and the DoD agency's homepage. </p>
+
+                
+                    </div>
                 </div>
             </div>
             <div class="experience-item">
-                <img src="work-icon.png" alt="Work Icon">
+                <img src="img/lhm.png" alt="Work Icon">
                 <div class="experience-details">
-                    <h3>Information Systems Security Officer - Lockheed Martin.</h3>
+                    <h3>Information Systems Security Officer - Lockheed Martin</h3>
                     <p>Dates: Jun 2024 - Nov 2024</p>
+                    <div>
+                        <p>
+                            Implemented and configured classified Windows and Linux servers and clients. Ensured system
+                            uptime,
+                            security, and performance through proactive monitoring and troubleshooting.
+                            <br>
+                            <br>
+                            Performed weekly system audits and comprehensive media reviews to identify and mitigate potential
+                            vulnerabilities on unclassified and classified systems.
+                            <br>
+                            <br>
+                            Leveraged SCAP Tool, ACAS, EMASS, Splunk, and Nessus to conduct vulnerability assessments,
+                            generate
+                            reports, and implement corrective actions.
+                            <br>
+                            <br>
+                            Conducted thorough system security assessments, accreditations, and testing in alignment with DoD
+                            8500.01, NIST RMF and CNSSI directives.
+                        </p>
+                        </div>
+                        </div>
+                        </div>
+                        
+                    
+                        <div class="experience-item">
+                            <img src="img/TekSynap_Stacked_Logo_3d_without_Tagline-300x266.png" alt="Work Icon">
+                            <div class="experience-details">
+                                <h3>Helpdesk Specialist II - TekSynap</h3>
+                                <p>Dates: Aug 2023 - Jun 2024</p>
+                                <div>
+                                    <p>
+                                        Served as a primary IT liaison for classified/unclassified assets (workstations, software, devices, VOIP) to all end-users, achieving a consistent 90% or higher Customer Satisfaction Score for efficient ticket resolution, effective communication, and exceptional customer service.
+                
+                                        <br>
+                                        <br>
+                
+                                        Led the SIPRNet machine deployment of over 60 SIPRNet machines leveraging optimized machine staging and imaging processes, which resulted in a 12% improvement in deployment efficiency.
+                
+                                        <br>
+                                        <br>
+                
+                                        Managed user onboarding and access controls for a userbase of over 2,100 users by following established procedures within Active Directory. Ensured compliance to NIST CSF protocols.
+                
+                                        <br>
+                                        <br>
+                
+                                        Collaborated with the IT infrastructure team (systems administrators, network engineers, and cybersecurity engineers) to resolve complex IT issues requiring escalated privileges.
+                
+                                        <br>
+                                        <br>
+                
+                                        Recovered compromised storage devices from laptops, adhering to chain-of-custody protocols to preserve forensic integrity. Delivered them to the security team for further malware analysis and investigation.
+                
+                                        <br>
+                                        <br>
+                                        
+                                        Leveraged Wireshark and PowerShell for network traffic analysis and troubleshooting user connectivity issues. 
+                
+                
+                                        <br>
+                                        <br>
+                                        
+                                        Developed detailed & comprehensive user guides and contributed to shared internal knowledgebase, ensuring efficient knowledge transfer, documentation, and improved first-call resolution rates for the helpdesk team. 
+                        
+                                    </p>
                     </div>
-                <br>
-                    <p>
-                    Implemented and configured classified Windows and Linux servers and clients. Ensured system uptime, security, and performance through proactive monitoring and troubleshooting.
-
-                    <br>
-                    <br>
-
-                    Performed weekly system audits and comprehensive media reviews to identify and mitigate potential vulnerabilities on unclassified and classified systems.
-
-                    <br>
-                    <br>
-
-                    Leveraged SCAP Tool, ACAS, EMASS, Splunk, and Nessus to conduct vulnerability assessments, generate reports, and implement corrective actions.
-
-                    <br>
-                    <br>
-
-                    Conducted thorough system security assessments, accreditations, and testing in alignment with DoD 8500.01, NIST RMF and CNSSI directives.
-                    </p>
                 </div>
             </div>
         </section>
-
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-item">
+                <div class="skills-details">
+                    <h3>Cloud Platforms</h3>
+                    <div>
+                        <p>AWS</p>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-item">
+                <div class="skills-details">
+                    <h3>Programming/Scripting</h3>
+                    <div>
+                        <p>Python, Bash, PowerShell, JavaScript</p>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-item">
+                <div class="skills-details">
+                    <h3>Security Tools</h3>
+                    <div>
+                        <p>SIEM, IDS/IPS, Vulnerability Scanners, Penetration Testing Tools</p>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-item">
+                <div class="skills-details">
+                    <h3>Infrastructure as Code (IaC)</h3>
+                    <div>
+                        <p>Terraform, CloudFormation, Azure Resource Manager (ARM)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section id="certifications">
             <h2>Certifications</h2>
             <div class="certifications-item">
-                <img src="security-plus-icon.png" alt="Security+ Icon">
+                <img src="img/cert.png" alt="Security+ Icon">
                 <div class="certifications-details">
                     <h3>CompTIA Security+</h3>
                     <p>Issuer: CompTIA</p>
-                    <p>Date: June 2018</p>
-                    <a href="your-s3-bucket-link/security-plus-certificate.pdf" target="_blank" style="color:#64ffda;">View Certificate</a>
+                    <p>Date: March 2023</p>
+                    <a href="https://s3.us-west-1.amazonaws.com/www.kevin-d-nguyen.com/CompTIA+Security%2B+ce+certificate.pdf"
+                        target="_blank" style="color:#64ffda;">View Certificate</a>
                 </div>
             </div>
             <div class="certifications-item">
-                <img src="aws-certified-security-icon.png" alt="AWS Certified Security Icon">
+                <img src="img/cert2.png" alt="IC3 Icon">
                 <div class="certifications-details">
-                    <h3>AWS Certified Security - Specialty</h3>
-                    <p>Issuer: Amazon Web Services</p>
-                    <p>Date: March 2021</p>
-                    <a href="your-s3-bucket-link/aws-security-cert.pdf" target="_blank" style="color:#64ffda;">View Certificate</a>
-                </div>
-            </div>
-            <div class="certifications-item">
-                <img src="cissp-icon.png" alt="CISSP Icon">
-                <div class="certifications-details">
-                    <h3>Certified Information Systems Security Professional (CISSP)</h3>
-                    <p>Issuer: (ISC)²</p>
-                    <p>Date: Nov 2022</p>
-                    <a href="your-s-3-bucket-link/cissp-cert.pdf" target="_blank" style="color:#64ffda;">View Certificate</a>
+                    <h3>IC3 Digital Literacy Certification</h3>
+                    <p>Issuer: Certiport</p>
+                    <p>Date: Jan 2020</p>
+                    <a href="https://s3.us-west-1.amazonaws.com/www.kevin-d-nguyen.com/IC3+Cert.pdf" target="_blank" style="color:#64ffda;">View
+                        Certificate</a>
                 </div>
             </div>
         </section>
-
         <section id="projects">
             <h2>Projects</h2>
             <div class="projects-item">
-                <img src="aws-icon.png" alt="AWS Icon">
+                <img src="img/amazon-web-services.png" alt="AWS Icon">
                 <div class="projects-details">
-                    <h3>Automated Security Compliance in AWS</h3>
-                    <p>Developed a serverless application using AWS Lambda and Step Functions to automate security compliance checks. Generated detailed compliance reports and integrated with Slack for real-time notifications.</p>
-                    <a href="project-link" target="_blank" style="color:#64ffda;">View Project</a>
+                    <h3>Personal Website Portfolio in AWS</h3>
+                    <div>
+                        <p>Developed kevin-d-nguyen.com in HTML, CSS, and JavaScript. Utilized AWS for S3 static website hosting, Cloudfront, Route 53, and Code Pipeline for CI/CD.</p>
+                        <a href="https://github.com/Kevin-Nguyen-USA/Personal-Website" target="_blank" style="color:#64ffda;">View Project</a>
+                    </div>
                 </div>
             </div>
-            <div class="projects-item">
-                <img src="siem-icon.png" alt="SIEM Icon">
-                <div class="projects-details">
-                    <h3>Threat Detection and Response System</h3>
-                    <p>Designed and implemented a SIEM-based threat detection system using ELK stack. Configured custom alerts and dashboards for real-time security monitoring. Developed automated response scripts to mitigate security incidents.</p>
-                    <a href="project-link" target="_blank" style="color:#64ffda;">View Project</a>
+            
                 </div>
             </div>
         </section>
     </div>
-
     <script>
         function scrollToSection(sectionId) {
             document.getElementById(sectionId).scrollIntoView({
                 behavior: 'smooth'
             });
         }
-
-        window.onscroll = function() {scrollFunction()};
-
+        window.onscroll = function () {
+            scrollFunction()
+        };
         function scrollFunction() {
             if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
                 document.getElementById("topNav").style.top = "0";
