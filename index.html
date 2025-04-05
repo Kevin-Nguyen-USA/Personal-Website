@@ -2,561 +2,365 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Kevin's Portfolio!</title>
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="icon" href="https://s3.us-west-1.amazonaws.com/www.kevin-d-nguyen.com/img/favicon-32x32.png">
+    <title>Your Name - Cloud/Cybersecurity Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #282c33;
+            color: #d1d5db;
+            line-height: 1.6;
+            position: relative;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+            padding: 4em 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 3em 0;
+        }
+
+        header img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 1em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            color: #61afef;
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+            font-weight: 500;
+        }
+
+        section {
+            padding: 3em 0;
+        }
+
+        section h2 {
+            color: #abb2bf;
+            border-bottom: 2px solid #5c6370;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            font-size: 2em;
+            font-weight: 500;
+        }
+
+        .experience, .projects, .certifications, .education {
+            margin-bottom: 20px;
+            background-color: #3e4451;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .experience h3, .projects h3, .certifications h3, .education h3 {
+            color: #61afef;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-top: 3em;
+        }
+
+        .contact-info a {
+            margin: 0 15px;
+            color: #61afef;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-info img {
+            width: 30px;
+            height: 30px;
+            vertical-align: middle;
+        }
+
+        .certifications-item, .projects-item, .education-item, .experience-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            background-color: #3e4451;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .certifications-item img, .projects-item img, .education-item img, .experience-item img {
+            width: 80px;
+            height: auto;
+            margin-right: 15px;
+        }
+
+        .certifications-details, .projects-details, .education-details, .experience-details {
+            flex-grow: 1;
+        }
+
+        .side-nav {
+            position: fixed;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            z-index: 1000;
+        }
+
+        .nav-button {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background-color: #3e4451;
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-button:hover {
+            background-color: #61afef;
+        }
+
+        .nav-button img {
+            width: 30px;
+            height: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .side-nav {
+                display: none;
+            }
+        }
+
+        .top-nav {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background-color: #3e4451;
+            padding: 1em 0;
+            z-index: 1000;
+            transition: top 0.3s ease;
+        }
+
+        .top-nav-content {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-nav-logo {
+            width: 40px;
+            height: 40px;
+            background-color: #61afef;
+            color: #282c33;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .top-nav-links a {
+            color: #d1d5db;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .top-nav-links a:hover {
+            color: #61afef;
+        }
+
+        .intro-buttons {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .intro-buttons a {
+            display: inline-block;
+            margin: 5px;
+            background-color: #61afef;
+            color: #282c33;
+            padding: 8px 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .intro-buttons a:hover {
+            background-color: #569ece;
+        }
+    </style>
 </head>
-<body class="main-content">
-    <header class="container header active" id="home">
-        <div class="header-content">
-            <div class="left-header">
-                <div class="h-shape"></div>
-                <div class="image">
-                    <img src="img/avatar.png" alt="">
-                </div>
+<body>
+    <div class="top-nav" id="topNav">
+        <div class="top-nav-content">
+            <div class="top-nav-logo">KN</div>
+            <div class="top-nav-links">
+                <a href="#top">About Me</a>
+                <a href="#education">Education</a>
+                <a href="#experience">Experience</a>
+                <a href="#certifications">Certifications</a>
+                <a href="#projects">Projects</a>
             </div>
-            <div class="right-header">
-                <h1 class="name">
-                    Kevin Nguyen
-                    <br> 
-                    Cybersecurity and Cloud Professional
-                </h1>
-                <p>
+        </div>
+    </div>
 
-Driven IT professional with a passion for cybersecurity and system administration. This portfolio showcases my skillset, experience, and passion for IT. Attached on this page is my resume for your reference. Feel free to connect with me on LinkedIn or contact me directly via email!
-                </p>
-                
-                <div class="icons">
-                <br>
-
-                     <a href="https://www.linkedin.com/in/kevin-nguyen-usa/" class="icon">
-                     <i class="fab fa-linkedin fa-3x"></i>
-                     LinkedIn
-
-
-                     <a href="https://s3.us-west-1.amazonaws.com/www.kevin-d-nguyen.com/Resume++-+Kevin+Nguyen.pdf" class="icon">
-                        <i class="fa fa-file fa-3x"></i>
-                        Resume
-
-                    <a href="mailto:knguy39@gmail.com" class="icon">
-                        <i class="fa fa-envelope fa-3x"></i>
-                        Email
-
-                  
-                        
-                    <a href="https://github.com/Kevin-Nguyen-USA" class="icon">
-                        <i class="fab fa-github fa-3x"></i>
-                        GitHub
-                    
-
-                       
-                                
-                           
-                            
-                    </a>
-                   
-                   
-                </div>
-                
-               
-            </div>
+    <header id="top">
+        <img src="your-headshot.jpg" alt="Your Headshot">
+        <h1>Your Name</h1>
+        <p style="color: #61afef;">Cloud & Cybersecurity Professional</p>
+        <div class="intro-buttons">
+            <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</a>
+            <a href="mailto:knguy39@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i> Email</a>
+            <a href="https://github.com/your-github-username" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
         </div>
     </header>
-    <main>
-        <section class="container about" id="about">
-            <div class="main-title">
-                <h2>About <span>me</span></h2>
-            </div>
-            <div>
-                <br>
-                    
-                    <p>
-                       <center>
-                        I'm a driven IT professional with a passion for cybersecurity and system administration.  I possess a strong foundation in these fields, with a Bachelor's in Management Information Systems, a CompTIA Security+ certification, and a year of experience supporting a government agency with a Top-Secret security clearance.
-                        
-                        Beyond my formal qualifications, I'm deeply engaged in cloud & cybersecurity homelabs and projects, continuously honing my skills and knowledge. I'm well-versed in NIST RMF and DoD cybersecurity policies, and I'm eager to contribute my dedication, work ethic, and initiative for learning to a dynamic team.
-                        <br>
-                    </center>
-                        <br>
-                        <br>
-                        <br>
-                       <center><h1>Skills:</h1></center> 
-                        <br>
-                        <h2>Technologies</h2>
-                        AWS, Splunk, Linux (Kali Linux, Ubuntu, CentOS), Windows, Active Directory, VMware, MySQL, ACAS, Nessus
-                        <br>
-                        <br>
-                        <h2>Programming Languages</h2>
-                        AWS CLI, Linux Shell, SQL, Bash, Windows PowerShell, HTML & CSS
-                        <br>
-                        <br>
-                        <h2>Frameworks</h2>
-                        NIST CSF, NIST RMF, ITIL, Agile, DevOps
-                        <br>
-                        <br>
-                        <h2>Conceptual Knowledge</h2>
-                        Networking (TCP/IP & UDP), Network Security, Cloud Security, DevSecOps
-                        <br>
-                        <br>
-                        <h2>Soft Skills</h2>
-                        Strong analytical and problem-solving skills, detail-oriented, teamwork, effective communicator
-                        <br>
-                        <br>
-                        <h2>Interests</h2>
-                        Weightlifting; volleyball; building custom keyboards; graphic design
-                        <br>
-                        <br>
-                        <br>
-                        <center><h1>Certifications:</h1></center>
-                        <a href="https://s3.us-west-1.amazonaws.com/www.kevin-d-nguyen.com/IC3+Cert.pdf"> <img src="img/cert2.png" style="width:100px;height:100px;"></a>
-                       <a href="https://s3.us-west-1.amazonaws.com/www.kevin-d-nguyen.com/CompTIA+Security%2B+ce+certificate.pdf"> <img src="img/cert.png" style="width:100px;height:100px;"></a>
-                       
-                         
-                    </p>
-                 
-                    <br> 
-                    <br>
-                
-                
-                    
-                </div>
-            
-          
-                   
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <h4 class="stat-title">My Experience</h4>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    
-                    <p class="tl-duration">Aug 2018 - May 2022</p>
-                    <h5>Bachelor's of Business Administration<span> - University of New Mexico</span></h5>
-                    <p>
-            
-                        Graduated with Cum Laude Honors with a degree in Business Administration, majoring in Management Information Systems.
-<br> 
-<br>
-                        GPA: 3.7
-                    </p>
-                </div>
-     
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration">Jun 2022 - Sep 2022</p>
-                    <h5>Information Technology Intern<span> - Summit Electric Supply</span></h5>
-                    <p>
-                        Developed detailed user guides and contributed to the internal knowledge base, resulting in a 30% increase in first-call resolution rates for the helpdesk team.
 
-                        <br>
-                        <br>
-
-                        Supported Active Directory user management by processing 20+ user account creations/modifications per month, ensuring timely access for new hires and role changes.
-
-                        <br>
-                        <br>
-
-                        Migrated 20 critical kiosks from Windows 7 to Windows 10, decreasing system downtime by 5.25% and ensuring compatibility with SAP software for inventory tracking, purchases, and fulfillment.
-
-                        <br>
-                        <br>
-
-                        Identified & mitigated security threats/vulnerabilities (phishing, intrusion) using SolarWinds SIEM.
-
-            
-
-        
-                    </p>
-                </div>
-           
-                
-
-        
- 
-
-    <div class="timeline-item">
-        <div class="tl-icon">
-            <i class="fas fa-briefcase"></i>
-        </div>
-                    <p class="tl-duration">Aug 2023 - Jun 2024</p>
-                    <h5>Helpdesk Specialist II <span> - TekSynap</span></h5>
-                    <p>
-                        Served as a primary IT liaison for classified/unclassified assets (workstations, software, devices, VOIP) to all end-users, achieving a consistent 90% or higher Customer Satisfaction Score for efficient ticket resolution, effective communication, and exceptional customer service.
-
-                        <br>
-                        <br>
-
-                        Led the SIPRNet machine deployment of over 60 SIPRNet machines leveraging optimized machine staging and imaging processes, which resulted in a 12% improvement in deployment efficiency.
-
-                        <br>
-                        <br>
-
-                        Managed user onboarding and access controls for a userbase of over 2,100 users by following established procedures within Active Directory. Ensured compliance to NIST CSF protocols.
-
-                        <br>
-                        <br>
-
-                        Collaborated with the IT infrastructure team (systems administrators, network engineers, and cybersecurity engineers) to resolve complex IT issues requiring escalated privileges.
-
-                        <br>
-                        <br>
-
-                        Recovered compromised storage devices from laptops, adhering to chain-of-custody protocols to preserve forensic integrity. Delivered them to the security team for further malware analysis and investigation.
-
-                        <br>
-                        <br>
-                        
-                        Leveraged Wireshark and PowerShell for network traffic analysis and troubleshooting user connectivity issues. 
-
-
-                        <br>
-                        <br>
-                        
-                        Developed detailed & comprehensive user guides and contributed to shared internal knowledgebase, ensuring efficient knowledge transfer, documentation, and improved first-call resolution rates for the helpdesk team. 
-        
-                    </p>
-
-              </div>      
-              
-    
-
-            <div class="timeline-item">
-                <div class="tl-icon">
-                    <i class="fas fa-briefcase"></i>
-                </div>
-
-                <p class="tl-duration">Jun 2024 - Nov 2024</p>
-                <h5>Information Systems Security Officer - <span> Lockheed Martin</span></h5>
-                <p>
-                    Implemented and configured classified Windows and Linux servers and clients. Ensured system uptime, security, and performance through proactive monitoring and troubleshooting.
-
-                    <br>
-                    <br>
-
-                    Performed weekly system audits and comprehensive media reviews to identify and mitigate potential vulnerabilities on unclassified and classified systems.
-
-                    <br>
-                    <br>
-
-                    Leveraged SCAP Tool, ACAS, EMASS, Splunk, and Nessus to conduct vulnerability assessments, generate reports, and implement corrective actions.
-
-                    <br>
-                    <br>
-
-                    Conducted thorough system security assessments, accreditations, and testing in alignment with DoD 8500.01, NIST RMF and CNSSI directives.
-
-          
-
-    
-                </p>
-
-               </div>
-                
-           
-        </section>
-        <section class="container" id="portfolio">
-            <div class="main-title">
-                <h2>My <span>Projects</span><span class="bg-text"></h2>
-            </div>
-
-           
-                
-            <i class="fab fa-github fa-2x"></i>
-                    <a href="https://github.com/Kevin-Nguyen-USA/Fitness-Recipes" ><h1>Fitness Recipes App</h1></a>
-                    
-             
+    <div class="container">
+        <section id="introduction">
+            <h2>Introduction</h2>
             <p>
-                
-              
-• Developed a WebApp as part of my Capstone project for my MIS major using JavaScript, JSP, MySQL Server, and Apache TomCat for the back end and HTML & CSS for the front end.
-<br>
-<br>
-• WebApp featured Create, Retrieve, Update, and Delete (CRUD) operations and functionality.
-<br>
-<br>
-• WebApp allowed users to create user accounts and share “fitness recipes” with each other. 
-<br>
-<br>
-
-
+                Hello, I'm Your Name. A results-driven cloud and cybersecurity professional with 5+ years of experience in designing and implementing secure cloud solutions. My expertise spans across AWS and Azure, with a focus on automation, threat detection, and compliance. I am passionate about staying at the forefront of cybersecurity trends and contributing to a safer digital environment.
             </p>
-
-            <br>
-            <br>
-            <i class="fab fa-aws fa-2x"></i>
-            <a href="https://github.com/Kevin-Nguyen-USA/Personal-Website" ><h1>kevin-d-nguyen.com</h1></a>
-                    
-             
-            <p>
-                
-              
-• Developed my personal portfolio website using AWS S3, Route 53, and CloudFront for hosting.
-<br>
-<br>
-• Used HTML & CSS for website design.
-<br>
-<br>
-• Implemented CI/CD using AWS CodePipeline to introduce version control and ease of updates to website.
- 
-
-            </p>
-            
         </section>
-        <section class="container" id="blogs">
-            <div class="blogs-content">
-                <div class="main-title">
-                    <h2>Graphic Design <span>Portfolio</span><span class="bg-text"></h2>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-item">
+                <img src="university-icon.png" alt="University Icon">
+                <div class="education-details">
+                    <h3>Master of Science in Cybersecurity</h3>
+                    <p>University: Example University</p>
+                    <p>Dates: 2016 - 2018</p>
+                    <p>Relevant coursework: Network Security, Cryptography, Incident Response.</p>
                 </div>
-                <div class="blogs">
-                    <div class="blog">
-                        <img src="img/ST-Poster.jpg" alt="">
-                        <div class="blog-text">
-                            <h4>
-                                Stranger Things - Movie Poster Concept
-                            </h4>
-                            <p>
-                                I created this vintage style movie poster for the popular Netflix TV-series "Stranger Things".
-                                <br/>
-                                <br/>
-                                Program(s) used: Adobe Photoshop
-                            </p>
-                        </div>
-                    </div>
-                    <div class="blog">
-                        <img src="img/GOT-Poster.jpg" alt="">
-                        <div class="blog-text">
-                            <h4>
-                                Game of Thrones - Movie Poster Concept
-                            </h4>
-                            <p>
-                                Minimalist style movie poster I created for HBO's "Game of Thrones". 
-                                <br/>
-                                <br/>
-                                Program(s) used: Adobe Photoshop
-                            </p>
-                        </div>
-                    </div>
-                    <div class="blog">
-                        <img src="img/Caligram 1 .jpg" alt="">
-                        <div class="blog-text">
-                            <h4>
-                                One Punch Man Caligram
-                            </h4>
-                            <p>
-                                Caligram styled portrait of the main protagonist "Saitama" from the anime "One Punch Man".
-                                <br/>
-                                <br/>
-                                Program(s) used: Adobe Photoshop & Adobe Illustrator
-                            </p>
-                        </div>
-                    </div>
-                    <div class="blog">
-                        <img src="img/Doodle Grime.jpg" alt="">
-                        <div class="blog-text">
-                            <h4>
-                                Doodle Grime Portrait 
-                            </h4>
-                            <p>
-                                "Doodle Grime" style portait that I created. I hand sketched an actual portrait in Illustrator and manipulated layers & filters of various city-scapes using Photoshop.
-                                <br/>
-                                <br/>
-                                Award: Metro Youth Exhibit 2018 4th Place Award
-                                <br/>
-                                <br/>
-                                Program(s) used: Adobe Photoshop & Adobe Illustrator
-                            
-                            </p>
-                        </div>
-                    </div>
-                    <div class="blog">
-                        <img src="img/Anaglyphic Collage 2.jpg" alt="">
-                        <div class="blog-text">
-                            <h4>
-                                Anaglyphic Style Collage - Iron Man
-                            </h4>
-                            <p>
-                                Comic book inspired anaglypgic collage of Iron Man.
-                                <br/>
-                                <br/>
-                                Program(s) used: Adobe Photoshop
-                                
-                            </p>
-                        </div>
-                    </div>
-                    <div class="blog">
-                        <img src="img/Infographic.jpg" alt="">
-                        <div class="blog-text">
-                            <h4>
-                                Genji Infographic
-                            </h4>
-                            <p>
-                                I created this Infographic for "Genji Shimada" from "Overwatch".
-                                <br/>
-                                <br/>
-                                Program(s) used: Adobe Illustrator
-                            </p>
-                        </div>
-                    </div>
-                        <div class="blog">
-                            <img src="img/spirited away.jpg" alt="">
-                            <div class="blog-text">
-                                <h4>
-                                    Spirited Away - Movie Poster Concept
-                                </h4>
-                                <p>
-                                     Movie poster for the anime movie "Spirited Away" as part of my English final in College.
-                                    <br/>
-                                    <br/>
-                                    Program(s) used: Adobe Photoshop
-                                </p>
-                            </div>
-                        </div>
-                            <div class="blog">
-                                <img src="img/Vintage Poster2.jpg" alt="">
-                                <div class="blog-text">
-                                    <h4>
-                                        Kepler-452B Vintage Poster
-                                    </h4>
-                                    <p>
-                                        A vintage inspired travel poster for a planet. Created using shapes illustrated in Illustrator and filtering / layer customization in Photoshop.
-                                        <br/>
-                                        <br/>
-                                        Program(s) used: Adobe Photoshop & Adobe Illustrator
-                                    </p>
-                                </div>
-                            </div>
-                                <div class="blog">
-                                    <img src="img/Google Doodle.jpg" alt="">
-                                    <div class="blog-text">
-                                        <h4>
-                                            Google Doodle
-                                        </h4>
-                                        <p>
-                                            Hand-sketched illustration for Google Doodle 2017 competition.  
-                                            <br/>
-                                            <br/>
-                                            Program(s) used: Adobe Illustrator
-                                        </p>
-                                    </div>
-                    </div>
+            </div>
+            <div class="education-item">
+                <img src="university-icon.png" alt="University Icon">
+                <div class="education-details">
+                    <h3>Bachelor of Science in Computer Science</h3>
+                    <p>University: Another Example University</p>
+                    <p>Dates: 2012 - 2016</p>
+                    <p>Relevant coursework: Data Structures, Algorithms, Operating Systems.</p>
                 </div>
             </div>
         </section>
-        </section>
-        <section class="container contact" id="contact">
-            <div class="contact-container">
-                <div class="main-title">
-                    <h2>Contact <span>Me</span></h2>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <img src="work-icon.png" alt="Work Icon">
+                <div class="experience-details">
+                    <h3>Senior Cloud Security Engineer - Tech Innovate Solutions</h3>
+                    <p>Dates: Jan 2020 - Present</p>
+                    <p>Led the implementation of security best practices in AWS and Azure environments. Conducted regular vulnerability assessments and penetration testing. Automated security compliance using Infrastructure as Code (IaC) tools like Terraform and CloudFormation. Managed security incident response and provided expert guidance on cloud security architecture.</p>
                 </div>
-                <div class="contact-content-con">
-                    <div class="left-contact">
-                        
-                        <p>
-                            You can reach me at either my email or phone number! 
-                        </p>
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    <span>Location</span>
-                                </div>
-                                <p>
-                                    Albuquerque, New Mexico
-                                </p>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-envelope"></i>
-                                    <span>Email</span>
-                                </div>
-                                <p>
-                                    <span>knguy39@gmail.com</span>
-                                </p>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-user-graduate"></i>
-                                    <span>Education</span>
-                                </div>
-                                <p>
-                                    <span>University of New Mexico, Albuquerque</span>
-                                </p>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fa fa-phone"></i>
-                                    <span>Mobile Number</span>
-                                </div>
-                                <p>
-                                    <span>505-267-5421</span>
-                                </p>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-globe-africa"></i>
-                                    <span>Languages</span>
-                                </div>
-                                <p>
-                                    <span>English</span>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="contact-icons">
-                            <div class="contact-icon">
-                                <a href="https://www.linkedin.com/in/kevin-nguyen-usa/" target="_blank">
-                                    <i class="fab fa-linkedin"></i>
-                                </a>
-                                <a href="https://github.com/Kevin-Nguyen-USA" target="_blank">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="https://s3.us-west-1.amazonaws.com/www.kevin-d-nguyen.com/Resume++-+Kevin+Nguyen.pdf" target="_blank">
-                                    <i class="fa fa-file"></i>
-                                </a>
-                                <a href="mailto:knguy39@gmail.com" class="icon">
-                                    <i class="fa fa-envelope fa-3x"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                 
+            </div>
+            <div class="experience-item">
+                <img src="work-icon.png" alt="Work Icon">
+                <div class="experience-details">
+                    <h3>Cybersecurity Analyst - Secure Systems Inc.</h3>
+                    <p>Dates: Aug 2018 - Dec 2019</p>
+                    <p>Monitored network traffic and security logs using SIEM tools. Investigated and responded to security incidents. Developed and maintained security policies and procedures. Conducted security awareness training for employees.</p>
                 </div>
             </div>
         </section>
-    </main>
 
-    <div class="controls">
-        <div class="control active-btn" data-id="home" >
-            <i class="fas fa-home"></i>
-        </div>
-        <div class="control" data-id="about">
-            <i class="fas fa-user"></i>
-        </div>
-        <div class="control" data-id="portfolio">
-            <i class="fas fa-briefcase"></i>
-        </div>
-        <div class="control" data-id="blogs">
-            <i class="far fa-newspaper"></i>
-        </div>
-        <div class="control" data-id="contact">
-            <i class="fas fa-envelope-open"></i>
-        </div>
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <div class="certifications-item">
+                <img src="security-plus-icon.png" alt="Security+ Icon">
+                <div class="certifications-details">
+                    <h3>CompTIA Security+</h3>
+                    <p>Issuer: CompTIA</p>
+                    <p>Date: June 2018</p>
+                    <a href="your-s3-bucket-link/security-plus-certificate.pdf" target="_blank" style="color:#64ffda;">View Certificate</a>
+                </div>
+            </div>
+            <div class="certifications-item">
+                <img src="aws-certified-security-icon.png" alt="AWS Certified Security Icon">
+                <div class="certifications-details">
+                    <h3>AWS Certified Security - Specialty</h3>
+                    <p>Issuer: Amazon Web Services</p>
+                    <p>Date: March 2021</p>
+                    <a href="your-s3-bucket-link/aws-security-cert.pdf" target="_blank" style="color:#64ffda;">View Certificate</a>
+                </div>
+            </div>
+            <div class="certifications-item">
+                <img src="cissp-icon.png" alt="CISSP Icon">
+                <div class="certifications-details">
+                    <h3>Certified Information Systems Security Professional (CISSP)</h3>
+                    <p>Issuer: (ISC)²</p>
+                    <p>Date: Nov 2022</p>
+                    <a href="your-s-3-bucket-link/cissp-cert.pdf" target="_blank" style="color:#64ffda;">View Certificate</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-item">
+                <img src="aws-icon.png" alt="AWS Icon">
+                <div class="projects-details">
+                    <h3>Automated Security Compliance in AWS</h3>
+                    <p>Developed a serverless application using AWS Lambda and Step Functions to automate security compliance checks. Generated detailed compliance reports and integrated with Slack for real-time notifications.</p>
+                    <a href="project-link" target="_blank" style="color:#64ffda;">View Project</a>
+                </div>
+            </div>
+            <div class="projects-item">
+                <img src="siem-icon.png" alt="SIEM Icon">
+                <div class="projects-details">
+                    <h3>Threat Detection and Response System</h3>
+                    <p>Designed and implemented a SIEM-based threat detection system using ELK stack. Configured custom alerts and dashboards for real-time security monitoring. Developed automated response scripts to mitigate security incidents.</p>
+                    <a href="project-link" target="_blank" style="color:#64ffda;">View Project</a>
+                </div>
+            </div>
+        </section>
     </div>
-    <div class="theme-btn">
-        <i class="fas fa-adjust"></i>
-    </div>
-    <script src="app.js"></script>
+
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                document.getElementById("topNav").style.top = "0";
+            } else {
+                document.getElementById("topNav").style.top = "-60px";
+            }
+        }
+    </script>
 </body>
 </html>
